@@ -5,7 +5,7 @@
     "ng": "ng",
     "server": "ng serve",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build --prod",
+    "build": "ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
     "node:build-ts": "tsc -p server",
