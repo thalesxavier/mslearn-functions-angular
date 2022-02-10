@@ -3,8 +3,10 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { environment } from '../environments/environment';
 
+const URLGlb = 'http://localhost:7001/remoteEntry.js';
+const URLEdu = 'http://localhost:7002/remoteEntry.js';
 
-export const routes: Routes = [
+export const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   /*{
     path: 'globais',
@@ -24,11 +26,5 @@ export const routes: Routes = [
         exposedModule: './Module',
       }).then((m) => m.InteropModule),
   },*/
-  { path: '', pathMatch: 'full', redirectTo: 'vacations' },
-  /*{
-    path: 'vacations',
-    loadChildren: () =>
-      import('./vacations/vacations.module').then(m => m.VacationsModule)
-  },*/
-  //{ path: '**', component: NotFoundComponent }
+  
 ];

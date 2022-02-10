@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { PoTemplatesModule } from '@po-ui/ng-templates';
 import { PoModule } from '@po-ui/ng-components';
 
-import { routes } from './router';
+import { APP_ROUTES } from './router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
@@ -25,7 +25,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(APP_ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
