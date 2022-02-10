@@ -1,29 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { EntityDataModule } from '@ngrx/data';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { AppStoreModule } from './store/store.module';
-import { AboutComponent } from './about.component';
-import { declarables } from './core';
-import { routes } from './router';
-import { HomeComponent } from './home/home.component';
+import { PoTemplatesModule } from '@po-ui/ng-templates';
 import { PoModule } from '@po-ui/ng-components';
 
+import { routes } from './router';
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+
+
 @NgModule({
-  declarations: [AppComponent, AboutComponent, declarables, HomeComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent
+  ],
   imports: [
+    PoModule,
+    PoTemplatesModule,
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
-    AppStoreModule,
-    EntityDataModule,
-    PoModule,
-    RouterModule.forRoot([])
+    FormsModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

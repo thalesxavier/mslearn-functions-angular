@@ -352,3 +352,5 @@ MigrationBackup/
 # angular files
 dist/
 functions/azure-functions-core-tools/
+.angular/cache/13.2.3/babel-webpack/
+.angular/cache/13.2.3/angular-webpack/

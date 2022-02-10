@@ -1,7 +1,8 @@
+import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Routes } from '@angular/router';
-import { NotFoundComponent } from './core';
-import { AboutComponent } from './about.component';
 import { HomeComponent } from './home/home.component';
+import { environment } from '../environments/environment';
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -24,11 +25,10 @@ export const routes: Routes = [
       }).then((m) => m.InteropModule),
   },*/
   { path: '', pathMatch: 'full', redirectTo: 'vacations' },
-  {
+  /*{
     path: 'vacations',
     loadChildren: () =>
       import('./vacations/vacations.module').then(m => m.VacationsModule)
-  },
-  { path: 'about', component: AboutComponent },
-  { path: '**', component: NotFoundComponent }
+  },*/
+  //{ path: '**', component: NotFoundComponent }
 ];
