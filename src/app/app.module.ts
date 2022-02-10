@@ -10,6 +10,7 @@ import { AboutComponent } from './about.component';
 import { declarables } from './core';
 import { routes } from './router';
 import { HomeComponent } from './home/home.component';
+import { PoModule } from '@po-ui/ng-components';
 
 @NgModule({
   declarations: [AppComponent, AboutComponent, declarables, HomeComponent],
@@ -18,7 +19,9 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     RouterModule.forRoot(routes),
     AppStoreModule,
-    EntityDataModule
+    EntityDataModule,
+    PoModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
