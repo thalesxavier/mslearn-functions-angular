@@ -9,9 +9,10 @@ import { AppStoreModule } from './store/store.module';
 import { AboutComponent } from './about.component';
 import { declarables } from './core';
 import { routes } from './router';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, AboutComponent, declarables],
+  declarations: [AppComponent, AboutComponent, declarables, HomeComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
