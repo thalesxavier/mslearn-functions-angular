@@ -15,24 +15,26 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "aot": true,
             "outputPath": "dist/vacationwishlist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
             "styles": [
-							"./node_modules/@po-ui/style/css/po-theme-default-variables.min.css",
-							"./node_modules/@po-ui/style/css/po-theme-core.min.css",
-							"./src/styles.scss"
+							"node_modules/@po-ui/style/css/po-theme-default-variables.min.css",
+							"node_modules/@po-ui/style/css/po-theme-core.min.css",
+							"src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+						"extraWebpackConfig": "webpack.config.js",
+						"commonChunk": false
           },
           "configurations": {
             "production": {
@@ -44,6 +46,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
+              "extraWebpackConfig": "webpack.prod.config.js",
               "sourceMap": false,
               "namedChunks": false,
               "aot": true,
@@ -65,7 +68,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "vacationwishlist:build",
             "port": 4200,
@@ -73,7 +76,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "vacationwishlist:build:production"
+              "browserTarget": "vacationwishlist:build:production",
+              "extraWebpackConfig": "webpack.prod.config.js"
             }
           }
         },

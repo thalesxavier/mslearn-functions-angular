@@ -3,7 +3,7 @@ const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
 const share = mf.share;
 
-const URLGlb = "https://victorious-ocean-048ecee10.1.azurestaticapps.net/remoteEntry.js";
+const URLGlb = "http://localhost:1000/remoteEntry.js";
 const URLEdu = "http://localhost:1000/remoteEntry.js";
 
 const sharedMappings = new mf.SharedMappings();
@@ -54,6 +54,46 @@ module.exports = {
           requiredVersion: "auto",
         },
         "@angular/router": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@angular-architects/module-federation": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@angular/animations": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@angular/compiler": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@angular/forms": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@angular/platform-browser": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@angular/platform-browser-dynamic": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@po-ui/ng-components": {
+          singleton: true,
+          strictVersion: true,
+          requiredVersion: "auto",
+        },
+        "@po-ui/ng-templates": {
           singleton: true,
           strictVersion: true,
           requiredVersion: "auto",
