@@ -4,12 +4,12 @@ import { environment } from './environments/environment';
 Promise.all([
   loadRemoteEntry({
     type: 'module',
-    remoteEntry: 'https://victorious-ocean-048ecee10.1.azurestaticapps.net/main.7f38fad2660833b1.js',
-  }),
+    remoteEntry: 'https://victorious-ocean-048ecee10.1.azurestaticapps.net',
+  })/*,
   loadRemoteEntry({
     type: 'module',
-    remoteEntry: 'https://victorious-ocean-048ecee10.1.azurestaticapps.net/main.7f38fad2660833b1.js',
-  }),
+    remoteEntry: 'http://localhost:1000/remoteEntry.js',
+  }),*/
 ])
   .catch((err) => console.error('Error loading remote entries', err))
   .then(() => import('./bootstrap'))
