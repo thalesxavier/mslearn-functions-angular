@@ -3,8 +3,8 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { environment } from '../environments/environment';
 
-const URLGlb = 'http://localhost:7001/remoteEntry.js';
-const URLEdu = 'http://localhost:7002/remoteEntry.js';
+const URLGlb = 'https://victorious-ocean-048ecee10.1.azurestaticapps.net/main.7f38fad2660833b1.js';
+const URLEdu = 'https://victorious-ocean-048ecee10.1.azurestaticapps.net/main.7f38fad2660833b1.js';
 
 export const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },

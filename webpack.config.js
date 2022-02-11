@@ -3,8 +3,8 @@ const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
 const share = mf.share;
 
-const URLGlb = "http://localhost:7001/remoteEntry.js";
-const URLEdu = "http://localhost:7002/remoteEntry.js";
+const URLGlb = "https://victorious-ocean-048ecee10.1.azurestaticapps.net/main.7f38fad2660833b1.js";
+const URLEdu = "https://victorious-ocean-048ecee10.1.azurestaticapps.net/main.7f38fad2660833b1.js";
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(path.join(__dirname, "tsconfig.json"), [
