@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { environment } from '../environments/environment';
 
-const URLGlb = 'https://victorious-ocean-048ecee10.1.azurestaticapps.net/runtime.b5b719bcf32082c7.js';
+const URLGlb = 'https://victorious-ocean-048ecee10.1.azurestaticapps.net/remoteEntry.js';
 const URLEdu = 'http://localhost:1000/remoteEntry.js';  
 
 export const APP_ROUTES: Routes = [
