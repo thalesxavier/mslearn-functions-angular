@@ -4,7 +4,7 @@ import { environment } from './environments/environment';
 Promise.all([
   loadRemoteEntry({
     type: 'module',
-    remoteEntry: 'https://victorious-ocean-048ecee10.1.azurestaticapps.net',
+    remoteEntry: 'https://victorious-ocean-048ecee10.1.azurestaticapps.net/795.c295044528dde4f3.js',
   })/*,
   loadRemoteEntry({
     type: 'module',
