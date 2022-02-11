@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { PoMenuItem } from '@po-ui/ng-components';
 
@@ -7,14 +7,37 @@ import { PoMenuItem } from '@po-ui/ng-components';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
 
-  readonly menus: Array<PoMenuItem> = [
-    { label: 'Home', action: this.onClick.bind(this) }
-  ];
+export class AppComponent implements OnInit {
+  constructor() {}
 
-  private onClick() {
-    alert('Clicked in menu item')
+  public title: string = 'MULTIREPO Component';
+
+  public IsMenuCollapsed: boolean = false;
+
+  public menus: Array<PoMenuItem> = [];
+
+  ngOnInit(): void {
+    this.LoadMenus();
   }
 
+  public LoadMenus() {
+    this.menus = [];
+
+    this.menus.push(
+      {
+        label: 'Serviços Globais',
+        shortLabel: 'GLB',
+        link: '/globais',
+        icon: 'po-icon-balance',
+      }/*,
+      {
+        label: 'Educacional',
+        shortLabel: 'Edu',
+        link: '/educacional',
+        icon: 'po-icon-finance-secure',
+      }*/
+    );
+  }
 }
+

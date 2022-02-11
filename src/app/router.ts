@@ -8,7 +8,7 @@ const URLEdu = 'https://victorious-ocean-048ecee10.1.azurestaticapps.net/main.7f
 
 export const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  /*{
+  {
     path: 'globais',
     loadChildren: () =>
       loadRemoteModule({
@@ -16,7 +16,7 @@ export const APP_ROUTES: Routes = [
         remoteEntry: URLGlb,
         exposedModule: './Module',
       }).then((m) => m.InteropModule),
-  },
+  }/*,
   {
     path: 'educacional',
     loadChildren: () =>
